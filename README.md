@@ -8,7 +8,7 @@ Benvingut!
 Abans de començar, omple el següent qüestionari:
 
 - Quin és el teu nom?
-  ________________________________________
+  Pere Vidiella i Catalan
 
 - Modifica el `pom.xml` i concatena pel davant el teu usuari 
   de GitHub a artifactId
