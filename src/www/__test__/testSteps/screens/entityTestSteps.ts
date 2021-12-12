@@ -21,4 +21,14 @@ export const entityTestSteps: PostLineStep[] = [
   step(/Go back to the previous screen/, (line, [, name]) => {
     screen.getByRole("link", { name: "« Back" }).click();
   }),
+  step(/There should be "([^"]+)" emoji./, () => {
+    var listItem = screen.getAllByTestId("entity-list-item");
+    var text = listItem[1].textContent;
+    expect(text).toContain("\ud83e\udd54");
+  }),
+  step(/There should be no "([^"]+)" emoji./, () => {
+    var listItem = screen.getAllByTestId("entity-list-item");
+    var text = listItem[1].textContent;
+    expect(text).not.toContain("\ud83e\udd54");
+  }),
 ];
