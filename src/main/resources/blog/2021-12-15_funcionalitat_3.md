@@ -18,7 +18,6 @@ Què necessites per començar? Quina acció fas? Quin resultat trobes?
  * Go to the "leonard" "ship" "Beagle"
  * The resource "potato" maximum should be 0.
 
- * Given that the "leonard" "city" "Capital" has resource "potato" count 5.
  * Given that the "leonard" "city" "Capital" has resource "wood" count 4.
 
  * Go to the contained "deck" "Builder".
