@@ -4,18 +4,16 @@ import com.drpicox.game.testPost.reader.PostLine;
 import com.drpicox.game.testSteps.AbstractPostLineStep;
 import org.springframework.stereotype.Component;
 
-import static com.google.common.truth.Truth.assertThat;
-
 @Component
-public class ThereShouldBeNoEmojiStep extends AbstractPostLineStep {
+public class ThereShouldBeEmojiInTheShipStep extends AbstractPostLineStep {
 
 
-    public ThereShouldBeNoEmojiStep() {
+    public ThereShouldBeEmojiInTheShipStep() {
     }
 
     @Override
     protected String getRegex() {
-        return "There should be no \"([^_]+)\" emoji";
+        return "There should be \"([^\"]+)\" emoji in the \"([^\"]+)\" ship \"([^\"]+)\"";
     }
 
     @Override

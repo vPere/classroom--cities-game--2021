@@ -21,14 +21,19 @@ export const entityTestSteps: PostLineStep[] = [
   step(/Go back to the previous screen/, (line, [, name]) => {
     screen.getByRole("link", { name: "« Back" }).click();
   }),
-  step(/There should be "([^"]+)" emoji./, () => {
-    var listItem = screen.getAllByTestId("entity-list-item");
-    var text = listItem[1].textContent;
-    expect(text).toContain("\ud83e\udd54");
-  }),
-  step(/There should be no "([^"]+)" emoji./, () => {
-    var listItem = screen.getAllByTestId("entity-list-item");
-    var text = listItem[1].textContent;
-    expect(text).not.toContain("\ud83e\udd54");
-  }),
+
+  step(/There should be (no )?"([^"]+)" emoji in the "([^"]+)" ship "([^"]+)"/,
+    (line, [,present, type, player, name]) => {
+      const allItems = getAllEntitiesListItems();
+      const title = `ship: ${name} of ${player}${
+        present ? "" : "\ud83e\udd54"
+      }`;
+      const object = allItems.find((item) => item.textContent?.includes(title));
+      expect(object?.textContent).toBe(title);
+    }),
 ];
+
+    function getAllEntitiesListItems(): HTMLElement[] {
+      return screen.queryAllByRole("listitem");
+    }
+

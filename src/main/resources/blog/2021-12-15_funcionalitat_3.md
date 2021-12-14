@@ -14,7 +14,7 @@ Què necessites per començar? Quina acció fas? Quin resultat trobes?
  * Given that "leonard" is playing.
  * Go to the next player "leonard"
  <!-- SNAPSHOT status=200 -->
- * There should be no "potato" emoji.
+ * There should be no "potato" emoji in the "leonard" ship "Beagle".
  * Go to the "leonard" "ship" "Beagle"
  * The resource "potato" maximum should be 0.
 
@@ -27,4 +27,4 @@ Què necessites per començar? Quina acció fas? Quin resultat trobes?
  * The resource "potato" maximum should be 5.
  * End the round.
  <!-- SNAPSHOT status=200 -->
- * There should be "potato" emoji.
+ * There should be "potato" emoji in the "leonard" ship "Beagle".
